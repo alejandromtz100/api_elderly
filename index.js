@@ -6,7 +6,7 @@ const app = express();
 const usuarios = require('./src/routes/usuario'); // Rutas para usuarios
 const backupRoutes = require("./src/routes/backup");
 const adulto = require('./src/routes/adulto'); // Rutas para adultos
-
+const suscripcionRoutes = require("./src/routes/suscripcion");
 
 
 
@@ -21,6 +21,7 @@ app.use(express.json());
 app.use('/api', usuarios);
 app.use("/api", backupRoutes);
 app.use('/api', adulto);
+app.use("/api", suscripcionRoutes);
 
 
 const PORT = process.env.PORT || 4000;
